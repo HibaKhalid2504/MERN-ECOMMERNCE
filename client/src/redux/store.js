@@ -14,5 +14,9 @@ const rootReducer = combineReducers({
 const store = configureStore({
   reducer: rootReducer,
 });
+const initialState = {
+  products: [], // Default to an empty array
+  // ... other state properties
+};
 
 export default store;

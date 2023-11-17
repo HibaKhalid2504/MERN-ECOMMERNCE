@@ -2,6 +2,8 @@ import React from "react";
 import Wrapper from "../../components/Wrapper";
 import { Tabs } from "antd";
 import UserProfile from "./userProfile";
+import FooterBottom from "../../components/home/Footer/FooterBottom"
+
 
 const UserDashboard = () => {
   const userItems = [
@@ -22,6 +24,8 @@ const UserDashboard = () => {
       <div className="mt-10">
         <Tabs tabPosition="left" items={userItems} />
       </div>
+    <FooterBottom/>
+
     </Wrapper>
   );
 };

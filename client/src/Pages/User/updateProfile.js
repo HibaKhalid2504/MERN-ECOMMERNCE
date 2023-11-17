@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { hideLoading, showLoading } from "../../redux/loaderSlice";
 import toast from "react-hot-toast";
+import FooterBottom from "../../components/home/Footer/FooterBottom"
 
 const UpdateProfile = () => {
   const { user } = useSelector((state) => state.user);
@@ -145,7 +146,10 @@ const UpdateProfile = () => {
           </Form>
         </div>
       </div>
+    <FooterBottom/>
     </div>
+    
+    
   );
 };
 

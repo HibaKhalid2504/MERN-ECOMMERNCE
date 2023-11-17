@@ -11,7 +11,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import Navbar from "./components/Navbar";
 import Login from "./Pages/Login";
-import Register from "./Pages/Register";
+import Register from "./Pages/Register/register";
 import { Toaster } from "react-hot-toast";
 import { useSelector } from "react-redux";
 import PublicRoute from "./components/PublicRoute";
@@ -23,30 +23,9 @@ import AdminRoute from "./components/AdminRoute";
 import SingleUserScreen from "./Pages/Admin/singleUserScreen";
 import SingleProductScreen from "./Pages/Admin/singleProductScreen";
 import UpdateSingleProduct from "./Pages/Admin/updateSingleProduct";
-import SingleProduct from "./Pages/ProductPage/singelProductPage";
+import SingleProduct from "./Pages/ProductPage/singleProductPage";
 import CartPage from "./Pages/Cart/cartPage";
-
-// import Footer from "./components/home/Footer/Footer";
-// import FooterBottom from "./components/home/Footer/FooterBottom";
-// import Header from "./components/home/Header/Header";
-// import HeaderBottom from "./components/home/Header/HeaderBottom";
-// import SpecialCase from "./components/SpecialCase/SpecialCase";
-// import Journal from "./Pages/Journal/Journal";
-// import Contact from "./Pages/Contact/Contact";
-
-
-// const Layout = () => {
-//   return (
-//     <div>
-//       <HeaderBottom />
-//       <SpecialCase />
-//       <ScrollRestoration />
-//       <Outlet />
-//       <Footer />
-//       <FooterBottom />
-//     </div>
-//   );
-// };
+import Product from "./Pages/ProductPage/product";
 
 
 const App = () => {
@@ -162,8 +141,13 @@ const App = () => {
             }
           />
           <Route path="forget-password" element={<ForgetPassword />} />
-          {/* <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/journal" element={<Journal />}></Route> */}
+          <Route
+           path="/product" 
+           element={
+              <ProtectedRoute>
+              <Product />
+              </ProtectedRoute>
+              }/>
         </Routes>
       </Router>
     </>

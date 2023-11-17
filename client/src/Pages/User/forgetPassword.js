@@ -69,14 +69,9 @@ const ForgetPassword = ({ userEmail }) => {
         <div>
           <div className="flex sm:flex-row xs:flex-col items-center gap-[100px]">
             <div>
-              <dotlottie-player
-                src="https://lottie.host/df4a82f5-5f81-4645-b35f-57949168f2d2/jRTeZ1xhEm.json"
-                background="transparent"
-                speed="1"
-                sstyle={{ width: "400px", height: "400px" }}
-                loop
-                autoplay
-              ></dotlottie-player>
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 64 64">
+<path fill="#9c34c2" d="M45,22h-6v-4c0-3.859-3.141-7-7-7s-7,3.141-7,7v4h-6v-4c0-7.168,5.832-13,13-13s13,5.832,13,13V22z"></path><ellipse cx="32" cy="61" opacity=".3" rx="19" ry="3"></ellipse><path fill="orange" d="M48,19H16c-3.314,0-6,2.686-6,6v23c0,3.314,2.686,6,6,6h32c3.314,0,6-2.686,6-6V25	C54,21.686,51.314,19,48,19z"></path><circle cx="32" cy="37" r="4" fill="#9c34c2"></circle><path fill="#fff" d="M30,24c2.761,0,5-2.239,5-5H16c-3.314,0-6,2.686-6,6v18c2.761,0,5-2.239,5-5V25 c0-0.551,0.449-1,1-1H30z" opacity=".3"></path><path d="M54,48V31c-2.761,0-5,2.239-5,5v12c0,0.551-0.449,1-1,1H31c-2.761,0-5,2.239-5,5h22 C51.314,54,54,51.314,54,48z" opacity=".15"></path><path fill="#fff" d="M14,31c-0.828,0-1.5-0.672-1.5-1.5V25c0-1.93,1.57-3.5,3.5-3.5h5.5c0.828,0,1.5,0.672,1.5,1.5	s-0.672,1.5-1.5,1.5H16c-0.275,0-0.5,0.225-0.5,0.5v4.5C15.5,30.328,14.828,31,14,31z"></path><circle cx="20" cy="37" r="4" fill="#9c34c2"></circle><circle cx="44" cy="37" r="4" fill="#9c34c2"></circle>
+</svg>
             </div>
             <div className=" mt-[50px] rounded ">
               <h1 className="font-medium text-3xl flex gap-2 items-center">

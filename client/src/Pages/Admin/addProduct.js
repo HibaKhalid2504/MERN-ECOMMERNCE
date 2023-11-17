@@ -27,7 +27,7 @@ const AddProduct = () => {
   return (
     <Wrapper>
       <div className="flex items-center gap-[100px]">
-        <div>
+        {/* <div>
           <dotlottie-player
             src="https://lottie.host/97ec9be7-8894-4c26-aa11-5a379bf533b4/1xJhfpWrZ5.json"
             background="transparent"
@@ -35,9 +35,10 @@ const AddProduct = () => {
             style={{ width: "400px", height: "400px" }}
             loop
             autoplay
-          ></dotlottie-player>
+          ></dotlottie-player> */}
+          <div class="icons8-add-product"></div>
         </div>
-        <div className=" mt-[50px] rounded ">
+        <div className=" mt-[50px] rounded text-slate-800">
           <h1 className="font-medium text-3xl">Add New Product</h1>
           <p className="text-gray-600 mt-6">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -129,7 +130,7 @@ const AddProduct = () => {
             </div>
           </Form>
         </div>
-      </div>
+      {/* </div> */}
     </Wrapper>
   );
 };

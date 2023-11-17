@@ -3,6 +3,8 @@ import { Tabs } from "antd";
 
 import UpdateProfile from "./updateProfile";
 import ForgetPassword from "./forgetPassword";
+import FooterBottom from "../../components/home/Footer/FooterBottom"
+
 
 const UserProfile = () => {
   const items = [
@@ -20,7 +22,10 @@ const UserProfile = () => {
   return (
     <div>
       <Tabs defaultActiveKey="1" type="card" items={items} />
+    <FooterBottom/>
+
     </div>
+    
   );
 };
 

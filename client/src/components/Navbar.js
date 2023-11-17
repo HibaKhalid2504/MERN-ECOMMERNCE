@@ -28,14 +28,6 @@ const Navbar = () => {
       link: "shop",
       title: "Shop",
     },
-    {
-      link: "/contact", 
-      title: "Contact",
-    },
-    {
-      link: "/journal",
-      title: "Journal",
-    },
   ];
   const logOut = () => {
     localStorage.clear();
