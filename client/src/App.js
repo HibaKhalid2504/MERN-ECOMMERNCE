@@ -24,8 +24,9 @@ import SingleUserScreen from "./Pages/Admin/singleUserScreen";
 import SingleProductScreen from "./Pages/Admin/singleProductScreen";
 import UpdateSingleProduct from "./Pages/Admin/updateSingleProduct";
 import SingleProduct from "./Pages/ProductPage/singleProductPage";
-import CartPage from "./Pages/Cart/cartPage";
+import CartPage from "./Pages/Cart/Cart";
 import Product from "./Pages/ProductPage/product";
+import Journal from "./Pages/Journal/Journal"
 
 
 const App = () => {
@@ -146,6 +147,13 @@ const App = () => {
            element={
               <ProtectedRoute>
               <Product />
+              </ProtectedRoute>
+              }/>
+              <Route
+           path="/journal" 
+           element={
+              <ProtectedRoute>
+              <Journal />
               </ProtectedRoute>
               }/>
         </Routes>

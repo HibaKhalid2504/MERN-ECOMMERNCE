@@ -25,8 +25,8 @@ const Navbar = () => {
       title: "Product",
     },
     {
-      link: "shop",
-      title: "Shop",
+      link: "journal",
+      title: "Journal",
     },
   ];
   const logOut = () => {

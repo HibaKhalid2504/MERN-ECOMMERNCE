@@ -1,13 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
-  userInfo: [],
-  products: [],
-};
+// const initialState = {
+  
+// };
 
 export const orebiSlice = createSlice({
   name: "orebi",
-  initialState,
+  initialState:{
+    userInfo: [],
+    products: [],
+  },
   reducers: {
     addToCart: (state, action) => {
       const item = state.products.find(

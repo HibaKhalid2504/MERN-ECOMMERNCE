@@ -9,17 +9,11 @@ import ItemCard from "./ItemCard";
 
 const Cart = () => {
   const dispatch = useDispatch();
-  const products = useSelector((state) => state.orebiReducer.products);
+  const products = useSelector((state) => state.cart.products);
   const [totalAmt, setTotalAmt] = useState("");
   const [shippingCharge, setShippingCharge] = useState("");
   useEffect(() => {
     let price = 0;
-  //   if (products) {
-  //     price = products.reduce((total, item) => total + item.price * item.quantity, 0);
-  //   }
-
-  //   setTotalAmt(price);
-  // }, [products]);
     products.map((item) => {
       price += item.price * item.quantity;
       return price;
@@ -37,8 +31,8 @@ const Cart = () => {
   }, [totalAmt]);
   return (
     <div className="max-w-container mx-auto px-4">
-      <Breadcrumbs title="Cart" />
-      {products.length > 0 ? (
+      {/* <Breadcrumbs title="Cart" /> */}
+      {products && products.length > 0 ? (
         <div className="pb-20">
           <div className="w-full h-20 bg-[#F5F7F7] text-primeColor hidden lgl:grid grid-cols-5 place-content-center px-6 text-lg font-titleFont font-semibold">
             <h2 className="col-span-2">Product</h2>
@@ -47,7 +41,7 @@ const Cart = () => {
             <h2>Sub Total</h2>
           </div>
           <div className="mt-5">
-            {products.map((item) => (
+            {products && products.map((item) => (
               <div key={item._id}>
                 <ItemCard item={item} />
               </div>
@@ -129,7 +123,7 @@ const Cart = () => {
               Your Shopping cart lives to serve. Give it purpose - fill it with
               books, electronics, videos, etc. and make it happy.
             </p>
-            <Link to="/shop">
+            <Link to="/product">
               <button className="bg-primeColor rounded-md cursor-pointer hover:bg-black active:bg-gray-900 px-8 py-2 font-titleFont font-semibold text-lg text-gray-200 hover:text-white duration-300">
                 Continue Shopping
               </button>
